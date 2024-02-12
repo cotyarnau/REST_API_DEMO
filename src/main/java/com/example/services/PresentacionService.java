@@ -8,7 +8,7 @@ public interface PresentacionService {
 
     public List<Presentacion> findAll();
     public Presentacion findById(int id);
-    public Presentacion save(Presentacion presentacion);
+    public void save(Presentacion presentacion);
     public void delete(Presentacion presentacion);
 
 }

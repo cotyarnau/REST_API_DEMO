@@ -29,8 +29,8 @@ public class PresentacionServiceimpl implements PresentacionService{
     }
 
     @Override
-    public Presentacion save(Presentacion presentacion) {
-       return presentacionDao.save(presentacion);
+    public void save(Presentacion presentacion) {
+      presentacionDao.save(presentacion);
     }
 
     @Override
