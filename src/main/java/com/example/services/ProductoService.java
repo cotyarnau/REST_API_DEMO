@@ -13,6 +13,7 @@ public interface ProductoService {
 
     public Page<Producto> findAll(Pageable pageable);
     public List<Producto> findAll(Sort sort);
+    public List<Producto> findAll();
     public Producto findById(int id);
     public Producto save(Producto producto);
     public void delete(Producto producto);
