@@ -167,7 +167,7 @@ public class ProductoController {
                 responseAsMap.put("producto", producto);
                 responseEntity = new ResponseEntity<Map<String,Object>>(responseAsMap, HttpStatus.OK);
             } else {
-                String errorMessage = "Producto on id" + idProduct + ", no encontrado";
+                String errorMessage = "Producto con id " + idProduct + ", no encontrado";
                 responseAsMap.put("errorMessage", errorMessage);
                 responseEntity = new ResponseEntity<Map<String,Object>>(responseAsMap, HttpStatus.NOT_FOUND);
             }
