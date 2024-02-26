@@ -55,7 +55,9 @@ public class SecurityConfig {
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(requests -> requests //Toda petición http debe ser autorizada
                         .requestMatchers("/api/auth/**").permitAll()
-                        .requestMatchers(HttpMethod.POST).hasAuthority("ADMIN")
+                        .requestMatchers(HttpMethod.POST).permitAll()
+
+                        // .requestMatchers(HttpMethod.POST, "/productos/**").hasAuthority("ADMIN")
                         .requestMatchers(HttpMethod.GET, "/productos/**").hasAnyAuthority("ADMIN", "USER")
                         .requestMatchers(HttpMethod.GET, "/productos/{id}").hasAnyAuthority("ADMIN", "USER")
                         .requestMatchers(HttpMethod.DELETE).hasAuthority("ADMIN")
